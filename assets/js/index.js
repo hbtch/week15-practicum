@@ -85,11 +85,16 @@
 
 //Задание 12
 // Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
-const numbers = [1, 2, 3, 4, 5];
-for (let i = 0; i > numbers.length; i++)
+//const numbers = [1, 2, 3, 4, 5];
+//let sum = 0;
+//for (let number of numbers) {
+//    sum += number
+//}
+//console.log(sum);
+
 //Задание 13
 // Выведите длину каждого слова из массива строк в консоль
-//const list = ['apple', 'banana', 'cherry'];
+const list = ['apple', 'banana', 'cherry'];
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
