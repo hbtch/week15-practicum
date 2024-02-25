@@ -94,21 +94,33 @@
 
 //Задание 13
 // Выведите длину каждого слова из массива строк в консоль
-const list = ['apple', 'banana', 'cherry'];
+//const list = ['apple', 'banana', 'cherry'];
+//for (let word of list) {
+//console.log(word.length);
+//}
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
-
+const list = ['apple', 'banana', 'cherry'];
+for (let word of list) {
+    console.log(word.toUpperCase());
+}
 //Задание 15
 // Подсчитайте количество гласных букв в строке
 // Подсказка: вам понадобится метод includes
-//const greeting = 'Hello, world!';
-//let vowelCount = 0;
-//const vowels = ['a', 'e', 'i', 'o', 'u'];
+const greeting = 'Hello, world!';
+let vowelCount = 0;
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+for (let element of greeting) {
+    if (vowels.includes(element)) {
+    vowelCount++
+    }
+}
+console.log(vowelCount);
 
 //Задание 16
 // Объедините все строки массива в одну строку с пробелами между ними
-//const words = ['Hello', 'world', '!'];
+const words = ['Hello', 'world', '!'];
 
 //Задание 17
 // Выведите числа от 1 до 10 в консоль используя цикл while
