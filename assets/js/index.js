@@ -1,27 +1,27 @@
 //Задание 1
 // Выведите числа от 1 до 10 в консоль
-//for (let i = 0; i < 11; i++) {
-//    {console.log( i );}
-//}
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
 
 //Задание 2
 // Выведите чётные числа от 1 до 20 в консоль
-//for (let i = 0; i < 21; i++) {
-//    if (i % 2 == 0)
-//    console.log( i );
-//}
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 == 0)
+    console.log(i);
+}
 
 //Задание 3
 // Выведите числа от 10 до 1 в консоль в обратном порядке
-//for (let i = 10; i >= 1; i--) {
-//    {console.log( i );}
-//}
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
+}
 
 //Задание 4
 // Выведите таблицу умножения на 5 от 1 до 10
-//for (let i = 0; i <= 10; i++) {
-//    {console.log(i * 5)};
-//}
+for (let i = 0; i <= 10; i++) {
+    console.log(i * 5);
+}
 
 //Задание 5
 // Вычислить сумму чисел от 1 до 100 и вывести значение в консоль
@@ -33,35 +33,35 @@
 
 //Задание 6
 // Выведите все элементы массива в консоль используя цикл for
-//const array = [1, 2, 3, 4, 5];
-//for (let i = 0; i < array.length; i+=1) {
-//    console.log(array[i]);
-//}
+const array = [1, 2, 3, 4, 5];
+for (let i = 0; i < array.length; i+=1) {
+    console.log(array[i]);
+}
 
 //Задание 7
 // Выведите сумму всех элементов массива используя цикл for
-//const numbers = [1, 2, 3, 4, 5];
-//let result = 0;
-//for (let i = 0; i < numbers.length; i++) {
-//    result += numbers[i];
-//}
-//console.log(result);
+const numbers = [1, 2, 3, 4, 5];
+let result = 0;
+for (let i = 0; i < numbers.length; i++) {
+    result += numbers[i];
+}
+console.log(result);
 
 //Задание 8
 // Напишите цикл for, который изменяет массив животных, делая их прекрасными! Например, если есть следующий массив: let animals = ["Кот", "Рыба", "Лемур"]; цикл должен сделать его таким: ["Кот - прекрасное животное", "Рыба - прекрасное животное", "Лемур - прекрасное животное"]
 // Подсказка: вам понадобится переприсвоить значения для каждого индекса, то есть присвоить новые значения уже суще- ствующим элементам: animals[0] = animals[0] + " - прекрасное животное";
-//let animals = ["Кот", "Рыба", "Лемур"];
-//for (let i = 0; i < animals.length; i++) {
-//    animals[i] = animals[i] + " - прекрасное животное";
-//    console.log(animals[i]);
-//}
+let animals = ["Кот", "Рыба", "Лемур"];
+for (let i = 0; i < animals.length; i++) {
+    animals[i] = animals[i] + " - прекрасное животное";
+    console.log(animals[i]);
+}
 
 //Задание 9
 // Выведите символы в строке в консоль
-//const str = 'Hello';
-//for (let symbol of str) {
-//    console.log(symbol);
-//}
+const str = 'Hello';
+for (let symbol of str) {
+    console.log(symbol);
+}
 
 //Задание 10
 // Выведите все элементы массива в консоль используя цикл for...of. Массив array объявлен в Задании 6
@@ -75,13 +75,13 @@
 //Задание 11
 // Выведите каждое слово из массива строк в консоль
 // Подсказка: вам понадобится метод массивов split
-//const sentences = ['Hello, world!', 'How are you?'];
-//for (let sentence of sentences) {
-//    const str = sentence.split();
-//for (let strs of str) {
-//    console.log(str);
-//}
-//}
+const sentences = ['Hello, world!', 'How are you?'];
+for (let sentence of sentences) {
+    const str = sentence.split();
+for (let strs of str) {
+    console.log(str);
+}
+}
 
 //Задание 12
 // Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
@@ -96,7 +96,7 @@
 // Выведите длину каждого слова из массива строк в консоль
 //const list = ['apple', 'banana', 'cherry'];
 //for (let word of list) {
-//console.log(word.length);
+//    console.log(word.length);
 //}
 
 //Задание 14
@@ -179,12 +179,30 @@ do {
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
+let sum = 0;
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
+function changeBackground() {
+    const hElements = document.querySelectorAll('h4');
+    hElements.forEach(element => {
+        element.style.backgroundColor = 'blue';
+    });
+}
+
+changeBackground();
 
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
 // Подсказка: используйте методы объекта Math и длину массива alphabet
-//let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-//let randomString = '';
+function generateRandomString(length) {
+    let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+    let randomString = '';
+    for(let i = 0; i < length; i++) {
+        let randomIndex = Math.floor(Math.random() * alphabet.length);
+        randomString += alphabet[randomIndex];
+    }
+    return randomString;
+}
+let randomString = generateRandomString(6);
+console.log(randomString);
