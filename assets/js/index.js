@@ -143,15 +143,39 @@ console.log(vowelCount);
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
-//let allPositive = true;
-
-
+let item = 0;
+let allPositive = true;
+while (item < allNumbers.length) {
+    if (allNumbers[item] >= 0)
+    allPositive = false; // Если найдено отрицательное число, изменяем значение переменной
+    break; // Прекращаем выполнение цикла
+}
+if (allPositive) {
+    console.log('Все элементы массива являются положительными числами.');
+} else {
+    console.log('Не все элементы массива являются положительными числами.');
+}
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
-//const random = [2, 4, 6, -3, 8, 10];
+const random = [2, 4, 6, -3, 8, 10];
+let i = 0;
+do {
+    console.log(random[i]);
+    if (random[i] < 0) {
+        break;
+    }
+    i++
+} while (random[i] >= 0 && i < random.length);
 
 //Задание 21
 // Выведите числа от 1 до 100, пропуская числа, которые делятся на 3 используя цикл do...while
+let number = 1;
+do {
+    if(number % 3 !== 0) {
+    console.log(number)
+    }
+    number++;
+} while (number <= 100);
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
